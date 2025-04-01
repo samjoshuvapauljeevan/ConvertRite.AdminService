@@ -1,0 +1,2212 @@
+{
+	"info": {
+		"_postman_id": "64880dd6-472b-45c2-8695-fb7fc334b541",
+		"name": "RiteAdminApis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "SignIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"riteadmin\",\r\n    \"password\":\"admin123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/auth/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Modules",
+			"item": [
+				{
+					"name": "Get Modules",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/modules",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"modules"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Modules With Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/moduleswithdetails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"moduleswithdetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Module",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"moduleName\": \"ModuleName1\",\r\n    \"moduleCode\": \"ModuleCode1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/modules",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"modules"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Module",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"moduleName\": \"ModuleName2_Updated\",\r\n    \"moduleCode\": \"ModuleCode2_Updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/modules/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"modules",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Module",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/modules/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"modules",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Objects",
+			"item": [
+				{
+					"name": "Get Objects",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/objects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"objects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Object",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"objectName\": \"ObjectName1a\",\r\n    \"objectCode\": \"ObjectCode1a\",\r\n    \"userObjectName\": \"UserObjectName1a\",\r\n    \"moduleCode\": \"ModuleCode1\",\r\n    \"parentObjectId\": 1,\r\n    \"fbdiSheet\": \"FbdiSheet1a\",\r\n    \"hdlSheet\": \"HdlSheet1a\",\r\n    \"loaderEndpoint\": \"LoaderEndpoint1a\",\r\n    \"reConQuery\": \"ReConQuery1a\",\r\n    \"sequenceInParent\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/objects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"objects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Object",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"objectName\": \"ObjectName2a_Updated\",\r\n    \"objectCode\": \"ObjectCode2a_Updated\",\r\n    \"userObjectName\": \"UserObjectName2a_Updated\",\r\n    \"moduleCode\": \"ModuleCode2a_Updated\",\r\n    \"parentObjectId\": 2,\r\n    \"fbdiSheet\": \"FbdiSheet2a_Updated\",\r\n    \"hdlSheet\": \"HdlSheet2a_Updated\",\r\n    \"loaderEndpoint\": \"LoaderEndpoint2a_Updated\",\r\n    \"reConQuery\": \"ReConQuery2a_Updated\",\r\n    \"sequenceInParent\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/objects/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"objects",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Object",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/objects/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"objects",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Objects By ModuleCode",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/objects?module_code=ModuleCode1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"objects"
+							],
+							"query": [
+								{
+									"key": "module_code",
+									"value": "ModuleCode1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Licenses",
+			"item": [
+				{
+					"name": "Get Licenses",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/licenses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"licenses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post License",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"licenseKey\": \"LicenseKey1\",\r\n    \"podLimit\": 3,\r\n    \"projectLimit\": 2,\r\n    \"effectiveStartDate\": \"2023-05-01\",\r\n    \"effectiveEndDate\": \"2023-05-31\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/licenses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"licenses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post License With Objects",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"licenseKey\": \"LicenseKey2\",\r\n    \"podLimit\": 3,\r\n    \"projectLimit\": 2,\r\n    \"effectiveStartDate\": \"2023-05-01\",\r\n    \"effectiveEndDate\": \"2023-05-31\",\r\n    \"objectIds\": [ 1 ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/licenses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"licenses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put License",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"licenseKey\": \"LicenseKey1_Updated\",\r\n    \"podLimit\": 3,\r\n    \"projectLimit\": 2,\r\n    \"effectiveStartDate\": \"2023-05-05\",\r\n    \"effectiveEndDate\": \"2023-05-25\",\r\n    \"objectIds\": [1, 2, 3, 4]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/licenses/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"licenses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put License With Modified Objects",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"licenseKey\": \"LicenseKey1_Updated\",\r\n    \"podLimit\": 5,\r\n    \"projectLimit\": 1,\r\n    \"effectiveStartDate\": \"2023-05-05\",\r\n    \"effectiveEndDate\": \"2023-05-25\",\r\n    \"objectIds\": [ 2 ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/licenses/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"licenses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put License With Empty Objects",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"licenseKey\": \"LicenseKey1_Updated\",\r\n    \"podLimit\": 5,\r\n    \"projectLimit\": 1,\r\n    \"effectiveStartDate\": \"2023-05-05\",\r\n    \"effectiveEndDate\": \"2023-05-25\",\r\n    \"objectIds\": [ ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/licenses/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"licenses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete License",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/licenses/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"licenses",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clients",
+			"item": [
+				{
+					"name": "Get Clients",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Client",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "clientName",
+									"value": "Client1",
+									"type": "text"
+								},
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "/C:/Users/sivap/Pictures/logo1.png"
+								},
+								{
+									"key": "licenseIds[]",
+									"value": "1",
+									"type": "default"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Client",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "clientName",
+									"value": "Client1_Updated",
+									"type": "default"
+								},
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "/C:/Users/sivap/Pictures/logo3.png"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Client",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Client Logo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/logo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"logo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pods",
+			"item": [
+				{
+					"name": "Get Pods",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/pods",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"pods"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pods WithDeatils",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/podswithdetails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"podswithdetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pod Modules",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/pods/1/modules",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"pods",
+								"1",
+								"modules"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pod Objects",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/pods/1/objects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"pods",
+								"1",
+								"objects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Pod",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"podName\": \"Dev Pod1\",\r\n  \"databaseUserName\": \"devpod1\",\r\n  \"databasePassword\": \"devpod1\",\r\n  \"tablespaceSize\": \"500K\",\r\n  \"licenseId\": 1,\r\n  \"clientId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/pods",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"pods"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Pod",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"podName\": \"Dev Pod1_Updated\",\r\n  \"licenseId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/pods/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"pods",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Pod",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/pods/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"pods",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PodCloudConfig",
+			"item": [
+				{
+					"name": "Get PodColudConfigs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/podcloudconfigs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"podcloudconfigs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get PodCloudConfigs By ClientId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/podcloudconfigs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"podcloudconfigs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post PodCloudConfigs",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pod_id\": 1,\r\n    \"url\": \"url1\",\r\n    \"client_id\": \"1\",\r\n    \"modules\": [\r\n        {\r\n            \"moduleCode\": \"ModuleCode1\",\r\n            \"userName\": \"user1\",\r\n            \"password\": \"pwd1\"\r\n        },\r\n        {\r\n            \"moduleCode\": \"ModuleCode2_Updated\",\r\n            \"userName\": \"user2\",\r\n            \"password\": \"pwd2\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/podcloudconfigs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"podcloudconfigs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put PodCloudConfigs",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\": 1,\r\n    \"podId\": 1,\r\n    \"url\": \"url2_Updated\",\r\n    \"moduleCode\": \"ModuleCode1\",\r\n    \"userName\": \"user2_Updated\",\r\n    \"password\": \"pwd2_Updated\",\r\n    \"objectIds\": [1]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/podcloudconfigs/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"podcloudconfigs",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete PodCloudConfigs",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/podcloudconfigs/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"podcloudconfigs",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get PodsLinked WithObjects",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/getPodsLinkedWithObjects/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"getPodsLinkedWithObjects",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get PodCloudConfigs By ClientId and PodId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/pods/1/podcloudconfigs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"pods",
+								"1",
+								"podcloudconfigs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ClientAdmins",
+			"item": [
+				{
+					"name": "Get ClientAdmins",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clientadmins",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clientadmins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post ClientAdmin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\": 1,\r\n    \"clientAdminName\": \"ClientAdminName1\",\r\n    \"clientAdminUserName\": \"ClientAdminUserName1\",\r\n    \"clientAdminPassword\": \"ClientAdminPassword1\",\r\n    \"podIds\": [ 1 ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clientadmins",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clientadmins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put ClientAdmin",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\": 1,\r\n    \"clientAdminName\": \"ClientAdminName1_Updated\",\r\n    \"clientAdminUserName\": \"ClientAdminUserName1_up\",\r\n    \"clientAdminPassword\": \"ClientAdminPassword1_up\",\r\n    \"podIds\": [ 1 ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clientadmins/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clientadmins",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ClientAdmin",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clientadmins/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clientadmins",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "Get Roles",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Role",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roleName\": \"Role1\",\r\n    \"description\": \"Role1 description\",\r\n    \"podId\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Role With Objects",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roleName\": \"Role2\",\r\n    \"description\": \"Role2 description\",\r\n    \"podId\": \"1\",\r\n    \"objectIds\": [ 1 ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Roles By PodId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/roles?pod_id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"roles"
+							],
+							"query": [
+								{
+									"key": "pod_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Role",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roleName\": \"Role1_Updated\",\r\n    \"description\": \"Role1 description\",\r\n    \"podId\": \"1\",\r\n    \"objectIds\": [1]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/roles/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"roles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Role With Modified Objects",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roleName\": \"Role1_Updated\",\r\n    \"description\": \"Role1 description\",\r\n    \"podId\": \"1\",\r\n    \"objectIds\": [2]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/roles/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"roles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Role With Empty Objects",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roleName\": \"Role1_Updated\",\r\n    \"description\": \"Role1 description\",\r\n    \"podId\": \"1\",\r\n    \"objectIds\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/roles/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"roles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Role",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/roles/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"roles",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"User1\",\r\n    \"password\": \"User1Password\",\r\n    \"personName\": \"User1 Personal Name\",\r\n    \"email\": \"email1\",\r\n    \"userLoginType\": \"Password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post User With Roles",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"User2\",\r\n    \"password\": \"User2Password\",\r\n    \"personName\": \"User2 Personal Name\",\r\n    \"email\": \"email2\",\r\n    \"userLoginType\": \"Password\",\r\n    \"roleIds\": [1]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"User1_Updated\",\r\n    \"password\": \"User1Password\",\r\n    \"personName\": \"User1 Personal Name\",\r\n    \"email\": \"email1\",\r\n    \"userLoginType\": \"Password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put User With Modified Roles",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"User1_Updated\",\r\n    \"password\": \"User1Password\",\r\n    \"personName\": \"User1 Personal Name\",\r\n    \"email\": \"email1\",\r\n    \"userLoginType\": \"Password\",\r\n    \"roleIds\": [1]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put User With Empty Roles",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"User1_Updated\",\r\n    \"password\": \"User1Password\",\r\n    \"personName\": \"User1 Personal Name\",\r\n    \"email\": \"email1\",\r\n    \"userLoginType\": \"Password\",\r\n    \"roleIds\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/users/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"users",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User auth type",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/users/authtype/User1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"users",
+								"authtype",
+								"User1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "Get Projects",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Project",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"projectName\": \"Project1\",\r\n    \"projectCode\": \"ProjectCode1\",\r\n    \"podId\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Project With Objects",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"projectName\": \"Project2\",\r\n    \"projectCode\": \"ProjectCode2\",\r\n    \"podId\": \"1\",\r\n    \"objectIds\": [ 1 ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Project",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"projectName\": \"Project1_Updated\",\r\n    \"projectCode\": \"ProjectCode1_Updated\",\r\n    \"podId\": \"1\",\r\n    \"objectIds\": [1]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/projects/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"projects",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Project With Modified Objects",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"projectName\": \"Project1_Updated\",\r\n    \"projectCode\": \"ProjectCode1_Updated\",\r\n    \"podId\": \"1\",\r\n    \"objectIds\": [2]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/projects/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"projects",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Project With Empty Objects",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"projectName\": \"Project1_Updated\",\r\n    \"projectCode\": \"ProjectCode1_Updated\",\r\n    \"podId\": \"1\",\r\n    \"objectIds\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/projects/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"projects",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Project",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaXRlYWRtaW4iLCJpYXQiOjE2ODg1Nzc4NTQsImV4cCI6MTY4ODU4MTQ1NH0.5sRZqk2TFNGhbuA3c5j9ffDns1W_0SyUjhx1r9Ei-QE:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/convertriteadmin/clients/1/projects/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"convertriteadmin",
+								"clients",
+								"1",
+								"projects",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

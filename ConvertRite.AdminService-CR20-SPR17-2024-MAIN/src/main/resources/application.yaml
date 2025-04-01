@@ -1,0 +1,447 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: logfile
+
+  endpoint:
+    health:
+      show-details: always
+      
+spring:
+  profiles:
+    active: dev
+
+schema:
+  master-scripts:
+    path: schema/master_scripts/
+  upgrade:
+    base:
+      path: schema/Upgrade/
+
+validation:
+  api:
+    mount:
+      path: /app/validation/
+
+db:
+  connection:
+    max:
+      retries: 3
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+  mail:
+    host: smtp.office365.com
+    port: 587
+    username: ritesuite-noreply@rite.digital
+    password: Ritesuite@234
+    support-email: support@rite.digital
+    schedule-time: 10000
+    user: https://cr20.convertrite.com/Core/
+    admin: https://cr20.convertrite.com/Admin/
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    require-ssl: true
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: root
+    url: jdbc:postgresql://localhost:5432/master
+    username: admin
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://ritesoftwareb2c.b2clogin.com/be1aee87-1a17-4eee-832b-e893cc28a2b5/v2.0/
+          jwks-uri: https://ritesoftwareb2c.b2clogin.com/ritesoftwareb2c.onmicrosoft.com/b2c_1_new2/discovery/v2.0/keys
+oracle:
+  datasource:
+    hostname: 129.80.193.246
+    password: MASTER
+    port: 1521
+    sid: V2CRTEST
+    username: MASTER
+    url: jdbc:oracle:thin:@//129.80.193.246:1521/V2CRTEST
+
+
+jwt:
+  secret: ===============de6ce6fc6799=4212=8a13=fbcc92d76386===============
+  expirytimems: 10800000
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+    tagsSorter: alpha
+logging:
+  file:
+    name: "./logs/admin/application.log"
+    max-history: 7
+    max-size: 10MB
+  level:
+    root: INFO
+    org:
+      springframework:
+        boot:
+          actuate: INFO
+    error: ERROR
+  total-size-cap: 100MB
+
+cors:
+  allowed-origins: "*"
+  allowed-methods: "*"
+  allowed-headers: "*"
+
+data:
+  sync:
+    cron : "0 30 17 * * ?"
+    enable: true
+    target:
+      object:
+        table: "cr_objects"
+        info:
+          table: "cr_object_information"
+        interface:
+          table: "CR_TARGET_INTF_COLUMN_LIST"
+---
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+  mail:
+    host: smtp.office365.com
+    port: 587
+    username: ritesuite-noreply@rite.digital
+    password: Ritesuite@234
+    support-email: support@rite.digital
+    schedule-time: 10000
+    user: https://cr20.convertrite.com/Core/
+    admin: https://cr20.convertrite.com/Admin/
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    require-ssl: true
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: admin123
+    url: jdbc:postgresql://129.80.100.183:5000/postgres
+    username: postgres
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://ritesoftwareb2c.b2clogin.com/be1aee87-1a17-4eee-832b-e893cc28a2b5/v2.0/
+          jwks-uri: https://ritesoftwareb2c.b2clogin.com/ritesoftwareb2c.onmicrosoft.com/b2c_1_new2/discovery/v2.0/keys
+oracle:
+  datasource:
+    hostname: 129.80.193.246
+    password: MASTER
+    port: 1521
+    sid: V2CRTEST
+    username: MASTER
+    url: jdbc:oracle:thin:@//129.80.193.246:1521/V2CRTEST
+jwt:
+  secret: ===============de6ce6fc6799=4212=8a13=fbcc92d76386===============
+  expirytimems: 10800000
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+    tagsSorter: alpha
+logging:
+  file:
+    name: "./logs/admin/application.log"
+    max-history: 7
+    max-size: 10MB
+  level:
+    root: INFO
+    org:
+      springframework:
+        boot:
+          actuate: INFO
+    error: ERROR
+  total-size-cap: 100MB
+
+cors:
+  allowed-origins: "*"
+  allowed-methods: "*"
+  allowed-headers: "*"
+
+data:
+  sync:
+    cron : "0 30 17 * * ?"
+    enable: true
+    target:
+      object:
+        table: "cr_objects"
+        info:
+          table: "cr_object_information"
+        interface:
+          table: "cr_target_intf_column_list"
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: test
+  mail:
+    host: smtp.office365.com
+    port: 587
+    username: ritesuite-noreply@rite.digital
+    password: Ritesuite@234
+    support-email: support@rite.digital
+    schedule-time: 10000
+    user: https://crtest2.convertrite.com/Core/
+    admin: https://crtest2.convertrite.com/Admin/
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    require-ssl: true
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: M8*Ny=h@
+    url: jdbc:postgresql://129.80.15.245:5000/postgres
+    username: postgres
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://ritesoftwareb2c.b2clogin.com/be1aee87-1a17-4eee-832b-e893cc28a2b5/v2.0/
+          jwks-uri: https://ritesoftwareb2c.b2clogin.com/ritesoftwareb2c.onmicrosoft.com/b2c_1_new2/discovery/v2.0/keys
+oracle:
+  datasource:
+    hostname: 129.80.193.246
+    password: MASTER
+    port: 1521
+    sid: V2CRTEST
+    username: MASTER
+    url: jdbc:oracle:thin:@//129.80.193.246:1521/V2CRTEST
+jwt:
+  secret: ===============de6ce6fc6799=4212=8a13=fbcc92d76386===============
+  expirytimems: 10800000
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+    tagsSorter: alpha
+logging:
+  file:
+    name: "./logs/admin/application.log"
+    max-history: 7
+    max-size: 10MB
+  level:
+    root: INFO
+    org:
+      springframework:
+        boot:
+          actuate: INFO
+    error: ERROR
+  total-size-cap: 100MB
+cors:
+  allowed-origins: "*"
+  allowed-methods: "*"
+  allowed-headers: "*"
+
+data:
+  sync:
+    cron : "0 30 17 * * ?"
+    enable: true
+    target:
+      object:
+        table: "cr_objects"
+        info:
+          table: "cr_object_information"
+        interface:
+          table: "cr_target_intf_column_list"
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: gold
+  mail:
+    host: smtp.office365.com
+    port: 587
+    username: ritesuite-noreply@rite.digital
+    password: Ritesuite@234
+    support-email: support@rite.digital
+    schedule-time: 10000
+    user: https://cr20gold.convertrite.com/Core/
+    admin: https://cr20gold.convertrite.com/Admin/
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    require-ssl: true
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: 145913_Mss
+    url: jdbc:postgresql://129.153.151.72:5000/postgres
+    username: postgres
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://ritesoftwareb2c.b2clogin.com/be1aee87-1a17-4eee-832b-e893cc28a2b5/v2.0/
+          jwks-uri: https://ritesoftwareb2c.b2clogin.com/ritesoftwareb2c.onmicrosoft.com/b2c_1_new2/discovery/v2.0/keys
+oracle:
+  datasource:
+    hostname: 129.153.17.160
+    password: CONVERTRITE
+    port: 1521
+    sid: CRGOLD2
+    username: CONVERTRITE
+    url: jdbc:oracle:thin:@//129.153.17.160:1521/CRGOLD2
+jwt:
+  secret: ===============de6ce6fc6799=4212=8a13=fbcc92d76386===============
+  expirytimems: 10800000
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+    tagsSorter: alpha
+logging:
+  file:
+    name: "./logs/admin/application.log"
+    max-history: 7
+    max-size: 10MB
+  level:
+    root: INFO
+    org:
+      springframework:
+        boot:
+          actuate: INFO
+    error: ERROR
+  total-size-cap: 100MB
+cors:
+  allowed-origins: "*"
+  allowed-methods: "*"
+  allowed-headers: "*"
+
+data:
+  sync:
+    cron : "0 30 17 * * ?"
+    enable: true
+    target:
+      object:
+        table: "cr_objects"
+        info:
+          table: "cr_object_information"
+        interface:
+          table: "CR_TARGET_INTF_COLUMN_LIST"
+
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: cr20demo
+  mail:
+    host: smtp.office365.com
+    port: 587
+    username: ritesuite-noreply@rite.digital
+    password: Ritesuite@234
+    support-email: support@rite.digital
+    schedule-time: 10000
+    user: https://cr20demo.convertrite.com/Core/
+    admin: https://cr20demo.convertrite.com/Admin/
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    require-ssl: true
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: 145913_Mss
+    url: jdbc:postgresql://129.158.215.42:5000/postgres
+    username: postgres
+  security:
+    oauth2:
+
+      resourceserver:
+        jwt:
+          issuer-uri: https://ritesoftwareb2c.b2clogin.com/be1aee87-1a17-4eee-832b-e893cc28a2b5/v2.0/
+          jwks-uri: https://ritesoftwareb2c.b2clogin.com/ritesoftwareb2c.onmicrosoft.com/b2c_1_new2/discovery/v2.0/keys
+oracle:
+  datasource:
+    hostname: 129.158.228.138
+    password: CONVERTRITE
+    port: 1521
+    sid: DEVDB
+    username: CONVERTRITE
+    url: jdbc:oracle:thin:@//129.158.228.138:1521/DEVDB
+jwt:
+  secret: ===============de6ce6fc6799=4212=8a13=fbcc92d76386===============
+  expirytimems: 10800000
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+    tagsSorter: alpha
+
+logging:
+  file:
+    name: "./logs/admin/application.log"
+    max-history: 7
+    max-size: 10MB
+  level:
+    root: INFO
+    org:
+      springframework:
+        boot:
+          actuate: INFO
+    error: ERROR
+  total-size-cap: 100MB
+
+cors:
+  allowed-origins: "*"
+  allowed-methods: "*"
+  allowed-headers: "*"
+
+data:
+  sync:
+    cron : "0 30 17 * * ?"
+    enable: true
+    target:
+      object:
+        table: "cr_objects"
+        info:
+          table: "cr_object_information"
+        interface:
+          table: "CR_TARGET_INTF_COLUMN_LIST"
